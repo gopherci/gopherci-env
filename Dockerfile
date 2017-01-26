@@ -1,7 +1,19 @@
 FROM golang:1.7
 
-RUN go get -v -u gopkg.in/alecthomas/gometalinter.v1 && gometalinter.v1 --install
+# Install vendoring tools
+RUN curl https://glide.sh/get | sh
+RUN go get -u github.com/golang/dep
+RUN go get -u github.com/kardianos/govendor
+RUN go get -u github.com/tools/godep
 
-RUN go get -v -u github.com/bradleyfalzon/apicompat/...
+# Install static analysis tools
+RUN go get -u github.com/golang/lint/golint
+RUN go get -u github.com/bradleyfalzon/apicompat/...
+RUN go get -u honnef.co/go/tools/cmd/gosimple
+RUN go get -u honnef.co/go/tools/cmd/staticcheck
+RUN go get -u honnef.co/go/tools/cmd/unused
+
+# Script to detect vendor tool and install deps
+COPY install-deps.sh /
 
 CMD ["sleep", "infinity"]
