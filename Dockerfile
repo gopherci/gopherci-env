@@ -14,6 +14,6 @@ RUN go get -u honnef.co/go/tools/cmd/staticcheck
 RUN go get -u honnef.co/go/tools/cmd/unused
 
 # Script to detect vendor tool and install deps
-COPY install-deps.sh /
+COPY install-deps.sh /usr/local/bin/
 
 CMD ["sleep", "infinity"]
