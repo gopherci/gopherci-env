@@ -1,6 +1,6 @@
 .PHONY: build push
 
-NS = bradleyfalzon
+NS = gopherci
 REPO = gopherci-env
 VERSION ?= latest
 
