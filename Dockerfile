@@ -1,4 +1,4 @@
-FROM golang:1.7
+FROM golang:1.8
 
 # Install vendoring tools
 RUN curl https://glide.sh/get | sh
