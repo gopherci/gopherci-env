@@ -5,12 +5,12 @@ REPO = gopherci-env
 VERSION ?= latest
 
 build:
-	docker build -t $(NS)/$(REPO):$(VERSION) .
+	docker image build -t $(NS)/$(REPO):$(VERSION) .
 
 build-no-cache:
-	docker build --pull --no-cache -t $(NS)/$(REPO):$(VERSION) .
+	docker image build --pull --no-cache -t $(NS)/$(REPO):$(VERSION) .
 
 push:
-	docker push $(NS)/$(REPO):$(VERSION)
+	docker image push $(NS)/$(REPO):$(VERSION)
 
 default: build
