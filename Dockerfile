@@ -13,6 +13,9 @@ RUN go get -u honnef.co/go/tools/cmd/gosimple
 RUN go get -u honnef.co/go/tools/cmd/staticcheck
 RUN go get -u honnef.co/go/tools/cmd/unused
 
+# Program to detect if file is generated or not
+RUN go get -u github.com/gopherci/isFileGenerated
+
 # Script to detect vendor tool and install deps
 COPY install-deps.sh /usr/local/bin/
 
