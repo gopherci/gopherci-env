@@ -20,6 +20,8 @@ make build-no-cache
 
 # Release
 
+Note, Drone currently handles publishing images to https://hub.docker.com/r/gopherci/gopherci-env/
+
 ```
 make push
 ```
