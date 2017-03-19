@@ -1,5 +1,3 @@
-
-
 pipeline:
   publish:
     image: plugins/docker
@@ -7,3 +5,15 @@ pipeline:
     password: ${DOCKER_PASSWORD}
     repo: gopherci/gopherci-env
     tags: latest
+
+  notify:
+    email:
+      from: noreply@github.com
+      host: smtp.mailgun.org
+      port: 587
+      username: ${MAILGUN_USERNAME}
+      password: ${MAILGUN_PASSWORD}
+      recipients:
+        - brad@teambrad.net
+    when:
+      status: [ success, failure ]
