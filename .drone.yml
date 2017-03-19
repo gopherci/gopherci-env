@@ -1,0 +1,9 @@
+
+
+pipeline:
+  publish:
+    image: plugins/docker
+    username: ${DOCKER_USERNAME}
+    password: ${DOCKER_PASSWORD}
+    repo: gopherci/gopherci-env
+    tags: latest
