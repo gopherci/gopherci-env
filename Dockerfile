@@ -1,7 +1,7 @@
 FROM golang:1.8
 
 # Install vendoring tools
-RUN curl https://glide.sh/get | sh
+RUN go get -u github.com/Masterminds/glide
 RUN go get -u github.com/golang/dep
 RUN go get -u github.com/kardianos/govendor
 RUN go get -u github.com/tools/godep
