@@ -21,7 +21,7 @@ COPY install-deps.sh /usr/local/bin/
 
 # Remove source code so we can clone into these directories if we happen
 # to have fetched the tool and then receive a PR for it (we can't clone
-# into a non-empty directory.
+# into a non-empty directory.)
 RUN rm -rf $GOPATH/src/*
 
 CMD ["sleep", "infinity"]
