@@ -4,7 +4,7 @@
 #
 
 # Detect vendoring tool and install dependencies
-if [[ -f 'manifest.json' ]]; then
+if [[ -f 'Gopkg.toml' ]]; then
 	echo 'Vendor tool detected as dep'
 	dep ensure
 elif [[ -f 'glide.yaml' ]]; then
