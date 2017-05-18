@@ -19,6 +19,9 @@ RUN go get -u github.com/gopherci/isFileGenerated
 # Script to detect vendor tool and install deps
 COPY install-deps.sh /usr/local/bin/
 
+# GopherCI supports installing apt packages, so prepare the apt indexes.
+RUN apt-get update
+
 # Remove source code so we can clone into these directories if we happen
 # to have fetched the tool and then receive a PR for it (we can't clone
 # into a non-empty directory.)
