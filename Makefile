@@ -11,6 +11,7 @@ build-no-cache:
 	docker image build --pull --no-cache -t $(NS)/$(REPO):$(VERSION) .
 
 push:
+	# Don't need to do this anymore, autobuilders will take care of pushing
 	docker image push $(NS)/$(REPO):$(VERSION)
 
 default: build
