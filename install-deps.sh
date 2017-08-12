@@ -7,6 +7,7 @@
 if [[ -f 'Gopkg.toml' ]]; then
 	echo 'Vendor tool detected as dep'
 	dep ensure
+    dep prune
 elif [[ -f 'glide.yaml' ]]; then
 	echo 'Vendor tool detected as glide'
 	glide install
