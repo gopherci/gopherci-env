@@ -1,4 +1,4 @@
-FROM golang:1.9.0
+FROM golang:1.9.1
 
 # Install vendoring tools
 RUN go get -u github.com/Masterminds/glide
