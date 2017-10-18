@@ -12,7 +12,7 @@ RUN go get -u github.com/bradleyfalzon/apicompat/...
 RUN go get -u honnef.co/go/tools/cmd/gosimple
 RUN go get -u honnef.co/go/tools/cmd/staticcheck
 RUN go get -u honnef.co/go/tools/cmd/unused
-RUN go get -u github.com/mvdan/unparam
+RUN go get -u mvdan.cc/unparam
 
 # Program to detect if file is generated or not
 RUN go get -u github.com/gopherci/isFileGenerated
