@@ -13,6 +13,7 @@ RUN go get -u honnef.co/go/tools/cmd/gosimple
 RUN go get -u honnef.co/go/tools/cmd/staticcheck
 RUN go get -u honnef.co/go/tools/cmd/unused
 RUN go get -u mvdan.cc/unparam
+RUN go get -u github.com/mdempsky/unconvert
 
 # Program to detect if file is generated or not
 RUN go get -u github.com/gopherci/isFileGenerated
